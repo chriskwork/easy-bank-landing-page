@@ -1,0 +1,209 @@
+$hero-height: 396px;
+$mobile-padding-x: 1.5625rem;
+
+nav {
+  display: none;
+}
+
+.container {
+  text-align: center;
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .sub-header {
+    background-color: $white;
+    padding: 20px $mobile-padding-x;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+  }
+
+  .modal {
+    padding: 20px;
+    position: fixed;
+    top: 60px;
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, $darkBlue, transparent);
+
+    #modal-content {
+      display: block;
+      margin: 0 auto;
+      background-color: $white;
+      border-radius: 5px;
+
+      li {
+        list-style-type: none;
+        padding: 20px 0;
+        color: $darkBlue;
+        font-weight: 400;
+      }
+    }
+
+    .header-btn {
+      display: none;
+    }
+  }
+
+  .section-one {
+    .hero-background {
+      background: url(../../images/bg-intro-mobile.svg) no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      height: 350px;
+
+      .hero-img {
+        background: url(../../images/image-mockups.png) no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+        width: 100%;
+        height: 450px;
+        left: 0;
+        top: -96px;
+      }
+    }
+
+    &-sub-one {
+      background-color: $white;
+      padding: 20px $mobile-padding-x 64px $mobile-padding-x;
+
+      h1 {
+        font-size: 2.8125rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .section-two {
+    background-color: $lightGrayishBlue;
+    padding: 4rem $mobile-padding-x;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    img {
+      margin: 40px 0 10px 0;
+    }
+  }
+
+  .section-three {
+    padding: 4rem $mobile-padding-x;
+    background-color: $veryLightGray;
+
+    &-cards-container {
+      text-align: left;
+
+      .section-three-card {
+        background-color: $white;
+        border-radius: 5px;
+
+        &:not(:last-child) {
+          margin-bottom: $mobile-padding-x;
+        }
+
+        .image-currency {
+          background: url(../../images/image-currency.jpg);
+        }
+
+        .image-restaurant {
+          background: url(../../images/image-restaurant.jpg);
+        }
+
+        .image-plane {
+          background: url(../../images/image-plane.jpg);
+        }
+
+        .image-confetti {
+          background: url(../../images/image-confetti.jpg);
+        }
+
+        .image-currency,
+        .image-restaurant,
+        .image-plane,
+        .image-confetti {
+          width: 100%;
+          height: 200px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          border-radius: 5px 5px 0 0;
+        }
+
+        .article {
+          padding: $mobile-padding-x;
+
+          h4 {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: 400;
+
+            &:hover {
+              color: $brightCyan;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    background-color: $darkBlue;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem $mobile-padding-x;
+
+    .footer-logo,
+    .svg-icons,
+    .footer-subsection-two {
+      margin-bottom: 25px;
+    }
+
+    .svg-icons {
+      svg {
+        margin: 0 10px;
+        transform: scale(1.3);
+
+        &:hover path {
+          fill: $brightCyan;
+        }
+      }
+    }
+
+    .footer-subsection-two,
+    .footer-subsection-three {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      ul > li {
+        list-style-type: none;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .footer-subsection-three {
+      small {
+        margin: 10px;
+      }
+    }
+  }
+}
