@@ -1,19 +1,13 @@
 // hamburger menu function
-
-const menuBtn = document.querySelector('#menuBtn')
-const overlay = document.querySelector('.overlay')
 const body = document.querySelector('body')
+const menuBtn = document.querySelector('.btn-hamburger')
+const nav = document.querySelector('.modal')
 
 menuBtn.addEventListener('click', () => {
-  if(menuBtn.classList.contains('open')){
-    menuBtn.classList.remove('open')
-    overlay.style.opacity = '0'
-    overlay.style.visibility = 'hidden'
-    body.style.overflow = 'auto'
-  } else{
-    menuBtn.classList.add('open')
-    overlay.style.opacity = '1'
-    overlay.style.visibility = 'visible'
+  nav.classList.toggle('active')
+  if(nav.classList.contains('active')){
     body.style.overflow = 'hidden'
+  }else {
+    body.style.overflow = 'auto'
   }
 })

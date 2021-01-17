@@ -1,0 +1,111 @@
+$desktop-padding: 12.5rem;
+
+@media screen and (min-width: 1400px) {
+  .container {
+    overflow: hidden;
+    max-width: 1920px;
+
+    .header {
+      .sub-header {
+        padding-left: $desktop-padding;
+        padding-right: $desktop-padding;
+
+        img {
+          cursor: pointer;
+        }
+
+        .menu-links ul li {
+          margin: 0 1rem;
+        }
+      }
+    } // header ends
+
+    .section-one {
+      height: 70vh;
+      flex-direction: row-reverse;
+      // justify-content: space-between;
+      align-items: center;
+
+      .hero-background {
+        height: 100%;
+        width: 100%;
+        background: url(../../images/bg-intro-desktop.svg) no-repeat;
+        background-position: left center;
+        flex: 55%;
+
+        .hero-img {
+          width: 80%;
+          height: 80vh;
+          position: absolute;
+          left: 8rem;
+          background-position: center bottom;
+        }
+      }
+
+      &-sub-one {
+        padding-left: $desktop-padding;
+        flex: 45%;
+      }
+    } // sec 1 ends
+
+    .section-two {
+      padding: 6rem $desktop-padding;
+
+      &-sub-two {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    } //sec 2 ends
+
+    .section-three {
+      padding: 6rem $desktop-padding;
+
+      &-cards-container {
+        grid-template-columns: repeat(4, 1fr);
+
+        .section-three-card {
+          height: 480px;
+        }
+      }
+    } // sec 3 ends
+
+    footer {
+      padding: 3rem $desktop-padding;
+
+      .footer-logo,
+      .svg-icons,
+      .footer-subsection-two {
+        margin-bottom: 0;
+      }
+
+      .footer-logo {
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-subsection-two {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        flex: 1;
+        justify-content: space-around;
+
+        ul li {
+          font-size: 0.95rem;
+        }
+      }
+
+      .footer-subsection-one {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-subsection-three {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    } // footer ends
+  } // container ends
+} // @media ends
